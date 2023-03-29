@@ -1,0 +1,88 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+/* 组件整体居中 */
+#app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* 组件内部css设置 */
+
+table,th,td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th {
+  width: 10rem;
+}
+
+.btn_group {
+  display: flex;
+  width: 16rem;
+  justify-content: center;
+}
+
+.btn {
+  width: 4rem;
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 8px;
+  padding: 4px 0;
+  margin: 12px .8rem;
+
+  cursor: pointer;
+}
+
+
+
+input {
+  width: 16rem;
+  height: 1.6rem;
+}
+
+/* 按钮互动样式 */
+.btn:hover {
+  background-color: rgb(100, 209, 164);
+  color: aliceblue;
+  border: 1px solid rgb(93, 129, 114);
+  box-shadow: 2px 1px 1px rgb(205, 205, 205);
+}
+
+.btn:active {
+  position: relative;
+  right: -2px;
+  bottom: -1px;
+  box-shadow: none;
+}
+
+#clear:hover {
+  background-color: rgb(226, 104, 104);
+  border: 1px solid rgb(131, 90, 90);
+}
+
+.sign {
+  position: absolute;
+  bottom: 12px;
+  color: pink;
+}
+
