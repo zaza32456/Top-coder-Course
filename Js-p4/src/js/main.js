@@ -2,7 +2,6 @@
 import '../css/style.scss'
 
 import { $imgGroup } from './imgGroup'
-
 // 获取根节点dom
 const $app = document.getElementById('app')
 
