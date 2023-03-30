@@ -77,6 +77,7 @@ body {
   bottom: 5rem;
   // row-gap 和 column-gap 的简写
   gap: 2rem;
+
 }
 
 .btn {
@@ -87,6 +88,7 @@ body {
   box-shadow: 0px 0px 4px rgb(61, 60, 60);
   @include setCenter;
   cursor: pointer;
+  opacity: .8;
   // 添加变换效果
   position: relative;
   bottom: 0rem;
@@ -97,7 +99,7 @@ body {
 .btn:hover {
   // bottom: .1rem;
   font-size: 1.4rem;
-
+  opacity: .9;
   // transition: .1s ease-in-out;
 }
 
