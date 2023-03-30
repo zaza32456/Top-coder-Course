@@ -2,10 +2,11 @@
 import '../css/style.scss'
 
 import { $imgGroup } from './imgGroup'
+import { $btnGroup } from './btnGroup'
 // 获取根节点dom
 const $app = document.getElementById('app')
 
 // 加入子节点imgGroup和btnGroup
 $app.append($imgGroup)
 
-// $app.append(btnGroup)
+$app.append($btnGroup)

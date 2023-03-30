@@ -6,7 +6,7 @@ const imgList = data.images
 
 // 创建imgGroup节点
 export const $imgGroup = document.createElement('div')
-$imgGroup.classList.add('imgGrouop')
+$imgGroup.classList.add('imgGroup')
 
 // 将所有img加入imgGroup节点中,为其添加img的class
 imgList.forEach(imgInfo => {

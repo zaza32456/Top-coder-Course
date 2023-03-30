@@ -28,3 +28,23 @@ body {
   background-position: center;
   background-size: cover;
 }
+
+.imgGroup {
+  position: relative;
+}
+
+// 根据每张图的位置设置不同的样式
+// nth:兄弟元素排序
+.img:nth-child(1) {
+  // 首位图片最大
+  min-width: 120rem;
+  width: 120rem;
+  aspect-ratio: 16/9;
+}
+
+// 选择从第2位开始的所有图片
+.img:nth-child(1n+2) {
+  position: absolute;
+  left:calc(50%);
+  // 回去看看css书
+}
