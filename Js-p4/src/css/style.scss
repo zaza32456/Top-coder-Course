@@ -28,3 +28,82 @@ body {
   background-position: center;
   background-size: cover;
 }
+
+.imgGroup {
+  position: relative;
+  @include setCenter;
+  // 因为第1张图片变absolute,导致容器没有大小，btnGroup定位固定在中间。加上大小。
+  min-width: 120rem;
+  width: 120rem;
+  aspect-ratio: 16/9;
+
+  gap: 2rem;
+}
+
+// 根据每张图的位置设置不同的样式
+// nth:兄弟元素排序
+.img:nth-child(1) {
+  // 首位图片移出文档流
+  position: absolute;
+  min-width: 120rem;
+  width: 120rem;
+  aspect-ratio: 16/9;
+  box-shadow: 2px 2px 4px #bebebe;
+
+}
+
+// 选择从第2位开始的所有图片
+.img:nth-child(1n+2) {
+  position: relative;
+  // 因为relative的原因，left从原位置而不是imgGroup的最左侧算起，所以位置偏右。
+  left: calc(50%);
+
+}
+
+// 选择第5位及之后的图片
+.img:nth-child(1n+5) {
+  // note:后面改0
+  opacity: 0.5;
+}
+
+.img + .img {
+  // 在imgGroup中添加gap后可以省略
+  // margin-left: 2rem;
+}
+
+.btnGroup {
+  position: absolute;
+  @include setCenter;
+  bottom: 5rem;
+  // row-gap 和 column-gap 的简写
+  gap: 2rem;
+}
+
+.btn {
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  width: 4rem;
+  aspect-ratio: 1/1;
+  box-shadow: 0px 0px 4px rgb(61, 60, 60);
+  @include setCenter;
+  cursor: pointer;
+  // 添加变换效果
+  position: relative;
+  bottom: 0rem;
+
+  // transition: .1s ease-in-out;
+}
+
+.btn:hover {
+  // bottom: .1rem;
+  font-size: 1.4rem;
+
+  // transition: .1s ease-in-out;
+}
+
+.btn:active {
+  bottom: 0rem;
+  transition: 0s;
+  box-shadow: 0px 0px 2px rgb(61, 60, 60);
+}
+

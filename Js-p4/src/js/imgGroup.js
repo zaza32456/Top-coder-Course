@@ -1,12 +1,14 @@
 // 使用vite时才可以使用这个方法引入
 import data from '../../data/db.json'
 
+import { $btnGroup } from './btnGroup'
+
 // 获取img列表
 const imgList = data.images
 
 // 创建imgGroup节点
 export const $imgGroup = document.createElement('div')
-$imgGroup.classList.add('imgGrouop')
+$imgGroup.classList.add('imgGroup')
 
 // 将所有img加入imgGroup节点中,为其添加img的class
 imgList.forEach(imgInfo => {
@@ -17,3 +19,5 @@ imgList.forEach(imgInfo => {
   // 将img添加到imgGroup中
   $imgGroup.append($img)
 }) 
+
+$imgGroup.append($btnGroup)
