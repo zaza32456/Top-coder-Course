@@ -1,7 +1,7 @@
 // 使用vite时才可以使用这个方法引入
 import data from '../../data/db.json'
 
-import { $btnGroup } from './btnGroup'
+
 
 // 获取img列表
 const imgList = data.images
@@ -20,4 +20,3 @@ imgList.forEach(imgInfo => {
   $imgGroup.append($img)
 }) 
 
-$imgGroup.append($btnGroup)
